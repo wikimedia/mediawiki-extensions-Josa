@@ -81,7 +81,7 @@ function _isHaveTail( $str, $isE = false ) {
 
 function getJosa( $type, $str ) {
 	global $Josa;
-	if ( $type == 'E' )
+	if ( $type == 'E' ) {
 		$tail = _isHaveTail( $str, true );
 	} else {
 		$tail = _isHaveTail( $str );
