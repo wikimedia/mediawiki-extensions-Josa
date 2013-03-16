@@ -16,7 +16,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'name' => 'Josa',
 	'author' => 'JuneHyeon Bae (devunt)',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:Josa',
-	'description' => '한국어 조사를 자동으로 처리하기 위한 확장기능',
+	'description' => 'Automates some part of Korean transliteration process.',
 	'version'  => '0.1',
 );
 $wgHooks['ParserFirstCallInit'][] = 'JosaPFSetup';
@@ -91,31 +91,31 @@ function getJosa( $type, $str ) {
 
 
 function JosaRenderER( $parser, $str ) {
-	return $str . getJosa( 'ER', $str );
+	return getJosa( 'ER', $str );
 }
 
 function JosaRenderEN( $parser, $str ) {
-	return $str . getJosa( 'EN', $str );
+	return getJosa( 'EN', $str );
 }
 
 function JosaRenderIG( $parser, $str ) {
-	return $str . getJosa( 'IG', $str );
+	return getJosa( 'IG', $str );
 }
 
 function JosaRenderGW( $parser, $str ) {
-	return $str . getJosa( 'GW', $str );
+	return getJosa( 'GW', $str );
 }
 
 function JosaRenderAY( $parser, $str ) {
-	return $str . getJosa( 'AY', $str );
+	return getJosa( 'AY', $str );
 }
 
 function JosaRenderI( $parser, $str ) {
-	return $str . getJosa( 'I', $str );
+	return getJosa( 'I', $str );
 }
 
 function JosaRenderE( $parser, $str ) {
-	return $str . getJosa( 'E', $str );
+	return getJosa( 'E', $str );
 }
 
 function JosaRenderExist( $parser, $str ) {
