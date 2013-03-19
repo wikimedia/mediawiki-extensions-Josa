@@ -20,7 +20,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'version'  => '0.1',
 );
 $wgHooks['ParserFirstCallInit'][] = 'JosaPFSetup';
-$wgExtensionMessagesFiles['Josa'] = dirname( __FILE__ ) . '/Josa.i18n.php';
+$wgExtensionMessagesFiles['JosaMagic'] = dirname( __FILE__ ) . '/Josa.i18n.magic.php';
 
 $Josa = array(
 	'ER' => array( '을', '를', '을(를)' ),
