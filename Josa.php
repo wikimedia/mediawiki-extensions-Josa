@@ -20,7 +20,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'version'  => '0.1',
 );
 $wgHooks['ParserFirstCallInit'][] = 'JosaPFSetup';
-$wgExtensionMessagesFiles['JosaMagic'] = dirname( __FILE__ ) . '/Josa.i18n.magic.php';
+$wgExtensionMessagesFiles['Josa'] = dirname( __FILE__ ) . '/Josa.i18n.php';
 
 $Josa = array(
 	'ER' => array( '을', '를', '을(를)' ),
@@ -33,14 +33,14 @@ $Josa = array(
 );
 
 function JosaPFSetup( &$parser ) {
-	$parser->setFunctionHook( '을를', 'JosaRenderER' ); # 곶감을 / 사과를
-	$parser->setFunctionHook( '은는', 'JosaRenderEN' ); # 곶감은 / 사과는
-	$parser->setFunctionHook( '이가', 'JosaRenderIG' ); # 곶감이 / 사과가
-	$parser->setFunctionHook( '과와', 'JosaRenderGW' ); # 곶감과 / 사과와
-	$parser->setFunctionHook( '아야', 'JosaRenderAY' ); # 태준아 / 철수야
-	$parser->setFunctionHook( '이', 'JosaRenderI' ); # 태준이가 / 철수가
-	$parser->setFunctionHook( '으', 'JosaRenderE' ); # 집으로 / 학교로
-	$parser->setFunctionHook( '받침유무', 'JosaRenderExist' );
+	$parser->setFunctionHook( 'EulRuel', 'JosaRenderER' ); # 곶감을 / 사과를
+	$parser->setFunctionHook( 'EunNeun', 'JosaRenderEN' ); # 곶감은 / 사과는
+	$parser->setFunctionHook( 'IGa', 'JosaRenderIG' ); # 곶감이 / 사과가
+	$parser->setFunctionHook( 'GwaWa', 'JosaRenderGW' ); # 곶감과 / 사과와
+	$parser->setFunctionHook( 'AYa', 'JosaRenderAY' ); # 태준아 / 철수야
+	$parser->setFunctionHook( 'I', 'JosaRenderI' ); # 태준이가 / 철수가
+	$parser->setFunctionHook( 'Eu', 'JosaRenderE' ); # 집으로 / 학교로
+	$parser->setFunctionHook( 'HaveTail', 'JosaRenderExist' );
 	return true;
 }
 
