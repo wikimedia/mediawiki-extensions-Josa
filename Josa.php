@@ -1,4 +1,4 @@
-<?
+<?php
 /**
   * Extension:Josa
   * Author: JuneHyeon Bae <devunt@gmail.com>
