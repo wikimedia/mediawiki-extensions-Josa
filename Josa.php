@@ -89,33 +89,67 @@ function getJosa( $type, $str ) {
 	return $Josa[$type][$tail];
 }
 
-
-function JosaRenderER( $parser, $str ) {
-	return getJosa( 'ER', $str );
+function JosaRenderER( $parser, $str, $with_str = false ) {
+	$josa = getJosa( 'ER', $str );
+	if ( $with_str ) {
+		return $str.$josa;
+	} else {
+		return $josa;
+	}
 }
 
-function JosaRenderEN( $parser, $str ) {
-	return getJosa( 'EN', $str );
+function JosaRenderEN( $parser, $str, $with_str = false ) {
+	$josa = getJosa( 'EN', $str );
+	if ( $with_str ) {
+		return $str.$josa;
+	} else {
+		return $josa;
+	}
 }
 
-function JosaRenderIG( $parser, $str ) {
-	return getJosa( 'IG', $str );
+function JosaRenderIG( $parser, $str, $with_str = false ) {
+	$josa = getJosa( 'IG', $str );
+	if ( $with_str ) {
+		return $str.$josa;
+	} else {
+		return $josa;
+	}
 }
 
-function JosaRenderGW( $parser, $str ) {
-	return getJosa( 'GW', $str );
+function JosaRenderGW( $parser, $str, $with_str = false ) {
+	$josa = getJosa( 'GW', $str );
+	if ( $with_str ) {
+		return $str.$josa;
+	} else {
+		return $josa;
+	}
 }
 
-function JosaRenderAY( $parser, $str ) {
-	return getJosa( 'AY', $str );
+function JosaRenderAY( $parser, $str, $with_str = false ) {
+	$josa = getJosa( 'AY', $str );
+	if ( $with_str ) {
+		return $str.$josa;
+	} else {
+		return $josa;
+	}
 }
 
-function JosaRenderI( $parser, $str ) {
-	return getJosa( 'I', $str );
+function JosaRenderI( $parser, $str, $with_str = false ) {
+	$josa = getJosa( 'I', $str );
+	if ( $with_str ) {
+		return $str.$josa;
+	} else {
+		return $josa;
+	}
 }
 
-function JosaRenderE( $parser, $str ) {
-	return getJosa( 'E', $str );
+function JosaRenderE( $parser, $str, $with_str = false ) {
+	$josa = getJosa( 'E', $str );
+	if ( $with_str ) {
+		return $str.$josa;
+	} else {
+		return $josa;
+	}
 }
 
 function JosaRenderExist( $parser, $str ) {
