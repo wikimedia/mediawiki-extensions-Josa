@@ -16,9 +16,13 @@ $wgExtensionCredits['parserhook'][] = array(
 	'name' => 'Josa',
 	'author' => 'JuneHyeon Bae (devunt)',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:Josa',
-	'description' => 'Automates some part of Korean transliteration process.',
-	'version'  => '0.1',
+	'descriptionmsg' => 'josa-desc',
+	'version'  => '0.1.1',
 );
 $wgHooks['ParserFirstCallInit'][] = 'Josa::InitParserFunction';
-$wgExtensionMessagesFiles['Josa'] = dirname( __FILE__ ) . '/Josa.i18n.php';
-$wgAutoloadClasses['Josa'] = dirname( __FILE__ ) . '/Josa.class.php';
+
+// Load i18n files
+$wgMessagesDirs['Josa'] = __DIR__ . '/i18n';
+$wgExtensionMessagesFiles['JosaMagic'] = __DIR__ . '/Josa.i18n.magic.php';
+
+$wgAutoloadClasses['Josa'] = __DIR__ . '/Josa.class.php';
