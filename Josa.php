@@ -3,7 +3,6 @@
   * Extension:Josa
   * Author: JuneHyeon Bae <devunt@gmail.com>
   * Original implementation by Park Shinjo <peremen@gmail.com>
-  * Improve Extension:Hanp (bug: T15712)
   * License: MIT License
 */
 
