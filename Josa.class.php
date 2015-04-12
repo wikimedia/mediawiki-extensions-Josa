@@ -23,23 +23,28 @@ class Josa {
 	 */
 	public static function onParserFirstCallInit( Parser &$parser ) {
 		foreach ( self::$josaMap as $key => $value ) {
-			$parser->setFunctionHook( $key, function( $parser, $str, $with_str = true ) use ($key) {
+			$parser->setFunctionHook( $key, function( $parser, $str, $with_str = true ) use ( $key ) {
 				$josa = Josa::getJosa( $key, $str );
 				if ( $with_str ) {
 					return $str . $josa;
 				} else {
 					return $josa;
 				}
-			});
+			} );
 		}
 		return true;
 	}
 
+	/*
+	 * @param string $type Type of last letter in word (see Josa::$josaMap's keys)
+	 * @param string $str Word to determine josa
+	 * @return string Josa
+	 */
 	public static function getJosa( $type, $str ) {
 		if ( mb_substr( $str, -2, 2, 'utf-8' ) == ']]' ) { # if end with internel link
 			$str = mb_substr( $str, 0, -2, 'utf-8' );
 		}
-		$chr = self::utf8_to_unicode( mb_substr( $str, -1, 1, 'utf-8' ) );
+		$chr = self::convertToJohabCode( mb_substr( $str, -1, 1, 'utf-8' ) );
 		if ( !$chr ) {
 			$idx = 2; # Not hangul
 		} elseif ( ( $chr - 0xAC00 ) % 28 == 0 ) {
@@ -52,7 +57,12 @@ class Josa {
 		return self::$josaMap[$type][$idx];
 	}
 
-	private static function utf8_to_unicode( $str ) {
+	/*
+	 * @param string $str String to convert
+	 * @return int Converted Johab code
+	 * see https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B8%80_%EC%83%81%EC%9A%A9_%EC%A1%B0%ED%95%A9%ED%98%95_%EC%9D%B8%EC%BD%94%EB%94%A9
+	 */
+	private static function convertToJohabCode( $str ) {
 		$values = array();
 		$lookingFor = 1;
 		for ( $i = 0; $i < strlen( $str ); $i++ ) {
@@ -69,5 +79,6 @@ class Josa {
 				}
 			}
 		}
+		return false;
 	}
 }
