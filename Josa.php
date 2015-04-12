@@ -17,6 +17,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'url' => 'https://www.mediawiki.org/wiki/Extension:Josa',
 	'descriptionmsg' => 'josa-desc',
 	'version'  => '0.1.1',
+	'license-name' => 'MIT',
 );
 $wgHooks['ParserFirstCallInit'][] = 'Josa::onParserFirstCallInit';
 
