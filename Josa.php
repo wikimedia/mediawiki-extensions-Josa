@@ -18,7 +18,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'descriptionmsg' => 'josa-desc',
 	'version'  => '0.1.1',
 );
-$wgHooks['ParserFirstCallInit'][] = 'Josa::InitParserFunction';
+$wgHooks['ParserFirstCallInit'][] = 'Josa::onParserFirstCallInit';
 
 // Load i18n files
 $wgMessagesDirs['Josa'] = __DIR__ . '/i18n';
