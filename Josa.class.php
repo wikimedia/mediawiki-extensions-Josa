@@ -44,7 +44,7 @@ class Josa {
 			$idx = 2; # Not hangul
 		} elseif ( ( $chr - 0xAC00 ) % 28 == 0 ) {
 			$idx = 1; # No trailing consonant
-		} elseif ( ( $type === 'Eu' ) && ( ( $chr - 0xAC00 ) % 28 == 8 ) ) {
+		} elseif ( ( $type === 'Eu/Euro' ) && ( ( $chr - 0xAC00 ) % 28 == 8 ) ) {
 			$idx = 1;  # $type is Eu/Euro and trailing consonant is rieul(ㄹ). This is exception on Korean postposition rules.
 		} else {
 			$idx = 0; # Trailing consonant exists
