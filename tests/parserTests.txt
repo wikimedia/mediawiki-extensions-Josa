@@ -1,0 +1,163 @@
+!! functionhooks
+Eul/Ruel
+Eun/Neun
+E/Ga
+Gwa/Wa
+A/Ya
+Eu/Euro
+E/
+!! endfunctionhooks
+
+!! test
+Josa {{#Eul/Ruel:}} -> Eul: Hangul
+!! options
+language=ko
+!! input
+{{#을를:법원}}
+!! result
+<p>법원을
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Hangul
+!! options
+language=ko
+!! input
+{{#을를:학교}}
+!! result
+<p>학교를
+</p>
+!! end
+
+!! test
+Josa {{#Eun/Neun:}} -> Eun: Hangul
+!! options
+language=ko
+!! input
+{{#은는:저녁}}
+!! result
+<p>저녁은
+</p>
+!! end
+
+!! test
+Josa {{#Eun/Neun:}} -> Neun: Hangul
+!! options
+language=ko
+!! input
+{{#은는:과자}}
+!! result
+<p>과자는
+</p>
+!! end
+
+!! test
+Josa {{#E/Ga:}} -> E: Hangul
+!! options
+language=ko
+!! input
+{{#이가:재판관}}
+!! result
+<p>재판관이
+</p>
+!! end
+
+!! test
+Josa {{#E/Ga:}} -> Ga: Hangul
+!! options
+language=ko
+!! input
+{{#이가:기여자}}
+!! result
+<p>기여자가
+</p>
+!! end
+
+!! test
+Josa {{#Gwa/Wa:}} -> Gwa: Hangul
+!! options
+language=ko
+!! input
+{{#과와:생강}}
+!! result
+<p>생강과
+</p>
+!! end
+
+!! test
+Josa {{#Gwa/Wa:}} -> Wa: Hangul
+!! options
+language=ko
+!! input
+{{#과와:양파}}
+!! result
+<p>양파와
+</p>
+!! end
+
+!! test
+Josa {{#A/Ya:}} -> A: Hangul
+!! options
+language=ko
+!! input
+{{#아야:개똥}}
+!! result
+<p>개똥아
+</p>
+!! end
+
+!! test
+Josa {{#A/Ya:}} -> Ya: Hangul
+!! options
+language=ko
+!! input
+{{#아야:철수}}
+!! result
+<p>철수야
+</p>
+!! end
+
+!! test
+Josa {{#Eu/Euro:}} -> Euro: Hangul
+!! options
+language=ko
+!! input
+{{#으로:항공편}}
+!! result
+<p>항공편으로
+</p>
+!! end
+
+!! test
+Josa {{#Eu/Euro:}} -> Ro: Hangul
+!! options
+language=ko
+!! input
+{{#으로:자동차}}
+!! result
+<p>자동차로
+</p>
+!! end
+
+!! test
+Josa {{#E/:}} -> E: Hangul
+!! options
+language=ko
+!! input
+{{#이:수영}}가
+!! result
+<p>수영이가
+</p>
+!! end
+
+!! test
+Josa {{#E/:}} -> (none): Hangul
+!! options
+language=ko
+!! input
+{{#이:영희}}가
+!! result
+<p>영희가
+</p>
+!! end

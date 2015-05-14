@@ -26,3 +26,4 @@ $wgMessagesDirs['Josa'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['JosaMagic'] = __DIR__ . '/Josa.i18n.magic.php';
 
 $wgAutoloadClasses['Josa'] = __DIR__ . '/Josa.class.php';
+$wgParserTestFiles[] = __DIR__ . '/tests/parserTests.txt';
