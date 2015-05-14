@@ -4,7 +4,7 @@ Eun/Neun
 E/Ga
 Gwa/Wa
 A/Ya
-Eu/Euro
+Euro/Ro
 E/
 !! endfunctionhooks
 
@@ -119,7 +119,7 @@ language=ko
 !! end
 
 !! test
-Josa {{#Eu/Euro:}} -> Euro: Hangul
+Josa {{#Euro/Ro:}} -> Euro: Hangul
 !! options
 language=ko
 !! input
@@ -130,7 +130,7 @@ language=ko
 !! end
 
 !! test
-Josa {{#Eu/Euro:}} -> Ro: Hangul
+Josa {{#Euro/Ro:}} -> Ro: Hangul
 !! options
 language=ko
 !! input

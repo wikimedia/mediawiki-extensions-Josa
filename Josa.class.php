@@ -13,7 +13,7 @@ class Josa {
 		'E/Ga' => array( '이', '가', '이(가)' ), # 곶감이 / 사과가
 		'Gwa/Wa' => array( '과', '와', '과(와)' ), # 곶감과 / 사과와
 		'A/Ya' => array( '아', '야', '아(야)' ), # 태준아 / 철수야
-		'Eu/Euro'  => array( '으로', '로', '(으)로' ), # 집으로 / 학교로
+		'Euro/Ro'  => array( '으로', '로', '(으)로' ), # 집으로 / 학교로
 		'E/'  => array( '이', '', '(이)' ), # 태준이가 / 철수가
 	);
 
@@ -49,8 +49,8 @@ class Josa {
 			$idx = 2; # Not hangul
 		} elseif ( ( $chr - 0xAC00 ) % 28 == 0 ) {
 			$idx = 1; # No trailing consonant
-		} elseif ( ( $type === 'Eu/Euro' ) && ( ( $chr - 0xAC00 ) % 28 == 8 ) ) {
-			$idx = 1;  # $type is Eu/Euro and trailing consonant is rieul(ㄹ). This is exception on Korean postposition rules.
+		} elseif ( ( $type === 'Euro/Ro' ) && ( ( $chr - 0xAC00 ) % 28 == 8 ) ) {
+			$idx = 1;  # $type is Euro/Ro and trailing consonant is rieul(ㄹ). This is exception on Korean postposition rules.
 		} else {
 			$idx = 0; # Trailing consonant exists
 		}
