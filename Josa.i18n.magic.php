@@ -7,7 +7,7 @@ $magicWords['en'] = array(
 	'E/Ga' => array( 0, 'EGa' ),
 	'Gwa/Wa' => array( 0, 'GwaWa' ),
 	'A/Ya' => array( 0, 'AYa' ),
-	'Eu/Euro' => array( 0, 'Euro' ),
+	'Euro/Ro' => array( 0, 'Euro' ),
 	'E/' => array( 0, 'E' ),
 );
 
@@ -17,6 +17,6 @@ $magicWords['ko'] = array(
 	'E/Ga' => array( 0, '이가' ),
 	'Gwa/Wa' => array( 0, '과와' ),
 	'A/Ya' => array( 0, '아야' ),
-	'Eu/Euro' => array( 0, '으로' ),
+	'Euro/Ro' => array( 0, '으로' ),
 	'E/' => array( 0, '이' ),
 );
