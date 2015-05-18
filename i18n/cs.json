@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aktron"
+			"Aktron",
+			"Mormegil"
 		]
 	},
-	"josa-desc": "Automatizace některých částí transliterace korejštiny"
+	"josa-desc": "Automatizace některých částí korejské gramatiky"
 }
