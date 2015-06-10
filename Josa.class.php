@@ -41,10 +41,10 @@ class Josa {
 	 * @return string Josa
 	 */
 	public static function getJosa( $type, $str ) {
-		if ( mb_substr( $str, -2, 2, 'utf-8' ) == ']]' ) { # if end with internel link
-			$str = mb_substr( $str, 0, -2, 'utf-8' );
-		}
-		$code = self::convertToJohabCode( mb_substr( $str, -1, 1, 'utf-8' ) );
+		// @codingStandardsIgnoreLine
+		$str = preg_replace( '/[\x{0000}-\x{0027}\x{002A}-\x{002F}\x{003A}-\x{0040}\x{005B}-\x{0060}\x{007B}-\x{00FF}]/u', '', $str );
+		$chr = mb_substr( $str, -1, 1, 'utf-8' );
+		$code = self::convertToJohabCode( $chr );
 		if ( !$code ) {
 			// Not hangul
 			$idx = 2;

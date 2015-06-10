@@ -172,3 +172,36 @@ language=ko
 <p>영희가
 </p>
 !! end
+
+!! test
+Josa with trailing ascii characters (1)
+!! options
+language=ko
+!! input
+{{#을를:[[도로]]}}
+!! result
+<p><a href="/index.php?title=%EB%8F%84%EB%A1%9C&amp;action=edit&amp;redlink=1" class="new" title="도로 (없는 문서)">도로</a>를
+</p>
+!! end
+
+!! test
+Josa with trailing ascii characters (2)
+!! options
+language=ko
+!! input
+{{#을를:'''기차'''}}
+!! result
+<p><b>기차</b>를
+</p>
+!! end
+
+!! test
+Josa with trailing ascii characters (3)
+!! options
+language=ko
+!! input
+{{#을를:사과 (과일)}}
+!! result
+<p>사과 (과일)을(를)
+</p>
+!! end
