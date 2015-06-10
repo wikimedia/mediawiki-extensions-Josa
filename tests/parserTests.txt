@@ -205,3 +205,399 @@ language=ko
 <p>사과 (과일)을(를)
 </p>
 !! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Eul: Number (0)
+!! options
+language=ko
+!! input
+{{#을를:0}}
+!! result
+<p>0을
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Eul: Number (1)
+!! options
+language=ko
+!! input
+{{#을를:1}}
+!! result
+<p>1을
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Eul: Number (2)
+!! options
+language=ko
+!! input
+{{#을를:2}}
+!! result
+<p>2를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Eul: Number (3)
+!! options
+language=ko
+!! input
+{{#을를:3}}
+!! result
+<p>3을
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Eul: Number (4)
+!! options
+language=ko
+!! input
+{{#을를:4}}
+!! result
+<p>4를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Eul: Number (5)
+!! options
+language=ko
+!! input
+{{#을를:5}}
+!! result
+<p>5를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Eul: Number (6)
+!! options
+language=ko
+!! input
+{{#을를:6}}
+!! result
+<p>6을
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Eul: Number (7)
+!! options
+language=ko
+!! input
+{{#을를:7}}
+!! result
+<p>7을
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Eul: Number (8)
+!! options
+language=ko
+!! input
+{{#을를:8}}
+!! result
+<p>8을
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Eul: Number (9)
+!! options
+language=ko
+!! input
+{{#을를:9}}
+!! result
+<p>9를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (A)
+!! options
+language=ko
+!! input
+{{#을를:A}}
+!! result
+<p>A를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (B)
+!! options
+language=ko
+!! input
+{{#을를:B}}
+!! result
+<p>B를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (C)
+!! options
+language=ko
+!! input
+{{#을를:C}}
+!! result
+<p>C를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (D)
+!! options
+language=ko
+!! input
+{{#을를:D}}
+!! result
+<p>D를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (E)
+!! options
+language=ko
+!! input
+{{#을를:E}}
+!! result
+<p>E를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (F)
+!! options
+language=ko
+!! input
+{{#을를:F}}
+!! result
+<p>F를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (G)
+!! options
+language=ko
+!! input
+{{#을를:G}}
+!! result
+<p>G를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (H)
+!! options
+language=ko
+!! input
+{{#을를:H}}
+!! result
+<p>H를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (I)
+!! options
+language=ko
+!! input
+{{#을를:I}}
+!! result
+<p>I를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (J)
+!! options
+language=ko
+!! input
+{{#을를:J}}
+!! result
+<p>J를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (K)
+!! options
+language=ko
+!! input
+{{#을를:K}}
+!! result
+<p>K를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Eul: Uppercase Alphabet (L)
+!! options
+language=ko
+!! input
+{{#을를:L}}
+!! result
+<p>L을
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Eul: Uppercase Alphabet (M)
+!! options
+language=ko
+!! input
+{{#을를:M}}
+!! result
+<p>M을
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Eul: Uppercase Alphabet (N)
+!! options
+language=ko
+!! input
+{{#을를:N}}
+!! result
+<p>N을
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (O)
+!! options
+language=ko
+!! input
+{{#을를:O}}
+!! result
+<p>O를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (P)
+!! options
+language=ko
+!! input
+{{#을를:P}}
+!! result
+<p>P를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (Q)
+!! options
+language=ko
+!! input
+{{#을를:Q}}
+!! result
+<p>Q를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Eul: Uppercase Alphabet (R)
+!! options
+language=ko
+!! input
+{{#을를:R}}
+!! result
+<p>R을
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (S)
+!! options
+language=ko
+!! input
+{{#을를:S}}
+!! result
+<p>S를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (T)
+!! options
+language=ko
+!! input
+{{#을를:T}}
+!! result
+<p>T를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (U)
+!! options
+language=ko
+!! input
+{{#을를:U}}
+!! result
+<p>U를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (V)
+!! options
+language=ko
+!! input
+{{#을를:V}}
+!! result
+<p>V를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (W)
+!! options
+language=ko
+!! input
+{{#을를:W}}
+!! result
+<p>W를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (X)
+!! options
+language=ko
+!! input
+{{#을를:X}}
+!! result
+<p>X를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (Y)
+!! options
+language=ko
+!! input
+{{#을를:Y}}
+!! result
+<p>Y를
+</p>
+!! end
+
+!! test
+Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (Z)
+!! options
+language=ko
+!! input
+{{#을를:Z}}
+!! result
+<p>Z를
+</p>
+!! end

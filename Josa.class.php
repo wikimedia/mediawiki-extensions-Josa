@@ -17,6 +17,24 @@ class Josa {
 		'E/'  => [ '이', '', '(이)' ], // 태준이가 / 철수가
 	];
 
+	// This dictionary matches each numbers and alphabets to the corresponding hangul pronounces
+	private static $pronounceMap = [
+		'0' => '영', '1' => '일', '2' => '이',
+		'3' => '삼', '4' => '사', '5' => '오',
+		'6' => '육', '7' => '칠', '8' => '팔',
+		'9' => '구',
+
+		'A' => '이', 'B' => '비', 'C' => '씨',
+		'D' => '디', 'E' => '이', 'F' => '프',
+		'G' => '지', 'H' => '치', 'I' => '이',
+		'J' => '이', 'K' => '이', 'L' => '엘',
+		'M' => '엠', 'N' => '엔', 'O' => '오',
+		'P' => '피', 'Q' => '큐', 'R' => '알',
+		'S' => '스', 'T' => '티', 'U' => '유',
+		'V' => '이', 'W' => '유', 'X' => '스',
+		'Y' => '이', 'Z' => '지',
+	];
+
 	/**
 	 * @param Parser $parser
 	 * @return bool
@@ -44,6 +62,9 @@ class Josa {
 		// @codingStandardsIgnoreLine
 		$str = preg_replace( '/[\x{0000}-\x{0027}\x{002A}-\x{002F}\x{003A}-\x{0040}\x{005B}-\x{0060}\x{007B}-\x{00FF}]/u', '', $str );
 		$chr = mb_substr( $str, -1, 1, 'utf-8' );
+		if ( array_key_exists( $chr, self::$pronounceMap ) ) {
+			$chr = self::$pronounceMap[$chr];
+		}
 		$code = self::convertToJohabCode( $chr );
 		if ( !$code ) {
 			// Not hangul
