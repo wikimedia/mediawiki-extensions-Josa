@@ -47,9 +47,9 @@ class Josa {
 		$code = self::convertToJohabCode( mb_substr( $str, -1, 1, 'utf-8' ) );
 		if ( !$code ) {
 			$idx = 2; # Not hangul
-		} elseif ( ( $code - 0xAC00 ) % 28 == 0 ) {
+		} elseif ( ( $code - 0xAC00 ) % 28 === 0 ) {
 			$idx = 1; # No trailing consonant
-		} elseif ( ( $type === 'Euro/Ro' ) && ( ( $code - 0xAC00 ) % 28 == 8 ) ) {
+		} elseif ( ( $type === 'Euro/Ro' ) && ( ( $code - 0xAC00 ) % 28 === 8 ) ) {
 			$idx = 1; # $type is Euro/Ro and trailing consonant is rieul(ㄹ). This is an exception on Korean postposition rules.
 		} else {
 			$idx = 0; # Trailing consonant exists
@@ -70,12 +70,12 @@ class Josa {
 			if ( $thisValue < 128 ) {
 				return false;
 			} else {
-				if ( count( $values ) == 0 ) {
+				if ( count( $values ) === 0 ) {
 					$lookingFor = ( $thisValue < 224 ) ? 2 : 3;
 				}
 				$values[] = $thisValue;
-				if ( count( $values ) == $lookingFor ) {
-					$number = ( $lookingFor == 3 ) ?
+				if ( count( $values ) === $lookingFor ) {
+					$number = ( $lookingFor === 3 ) ?
 						( ( $values[0] % 16 ) * 4096 ) + ( ( $values[1] % 64 ) * 64 ) + ( $values[2] % 64 ) :
 						( ( $values[0] % 32 ) * 64 ) + ( $values[1] % 64 );
 					return $number;
