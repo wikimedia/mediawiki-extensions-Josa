@@ -141,6 +141,17 @@ language=ko
 !! end
 
 !! test
+Josa {{#Eu/Euro:}} -> Ro: Hangul with riuel
+!! options
+language=ko
+!! input
+{{#으로:철길}}
+!! result
+<p>철길로
+</p>
+!! end
+
+!! test
 Josa {{#E/:}} -> E: Hangul
 !! options
 language=ko
