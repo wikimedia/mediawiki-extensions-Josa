@@ -36,21 +36,21 @@ class Josa {
 	}
 
 	/*
-	 * @param string $type Type of last letter in word (see Josa::$josaMap's keys)
-	 * @param string $str Word to determine josa
+	 * @param string $type Type of the last letter in the word (see Josa::$josaMap's keys)
+	 * @param string $str Word to determine the josa
 	 * @return string Josa
 	 */
 	public static function getJosa( $type, $str ) {
 		if ( mb_substr( $str, -2, 2, 'utf-8' ) == ']]' ) { # if end with internel link
 			$str = mb_substr( $str, 0, -2, 'utf-8' );
 		}
-		$chr = self::convertToJohabCode( mb_substr( $str, -1, 1, 'utf-8' ) );
-		if ( !$chr ) {
+		$code = self::convertToJohabCode( mb_substr( $str, -1, 1, 'utf-8' ) );
+		if ( !$code ) {
 			$idx = 2; # Not hangul
-		} elseif ( ( $chr - 0xAC00 ) % 28 == 0 ) {
+		} elseif ( ( $code - 0xAC00 ) % 28 == 0 ) {
 			$idx = 1; # No trailing consonant
-		} elseif ( ( $type === 'Euro/Ro' ) && ( ( $chr - 0xAC00 ) % 28 == 8 ) ) {
-			$idx = 1;  # $type is Euro/Ro and trailing consonant is rieul(ㄹ). This is exception on Korean postposition rules.
+		} elseif ( ( $type === 'Euro/Ro' ) && ( ( $code - 0xAC00 ) % 28 == 8 ) ) {
+			$idx = 1; # $type is Euro/Ro and trailing consonant is rieul(ㄹ). This is an exception on Korean postposition rules.
 		} else {
 			$idx = 0; # Trailing consonant exists
 		}
