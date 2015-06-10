@@ -41,16 +41,51 @@ class Josa {
 	 */
 	public static function onParserFirstCallInit( Parser &$parser ) {
 		foreach ( self::$josaMap as $key => $value ) {
-			$parser->setFunctionHook( $key, function ( $parser, $str, $with_str = true ) use ( $key ) {
+			// @codingStandardsIgnoreLine
+			$parser->setFunctionHook( $key, function ( $parser, $str, $param1 = null, $param2 = null ) use ( $key ) {
 				$josa = Josa::getJosa( $key, $str );
-				if ( $with_str ) {
-					return $str . $josa;
-				} else {
-					return $josa;
+
+				foreach ( [ $param1, $param2 ] as $param ) {
+					if ( $param === null ) {
+						break;
+					}
+
+					$override = Josa::checkOverrideParam( $param );
+					if ( $override !== false ) {
+						$josa = $override;
+						continue;
+					}
+
+					$josaonly = Josa::checkJosaonlyParam( $param );
+					if ( $josaonly === true ) {
+						$str = '';
+						continue;
+					}
 				}
+
+				return $str . $josa;
 			} );
 		}
 		return true;
+	}
+
+	/**
+	 * @param string $param String to check
+	 * @return bool|string Value of override param or false if it isn't presented
+	 */
+	public static function checkOverrideParam( $param ) {
+		if ( preg_match( '/^(override|덮어쓰기|오버라이드)=(.*)$/', $param, $matches ) === 0 ) {
+			return false;
+		}
+		return $matches[2];
+	}
+
+	/**
+	 * @param string $param String to check
+	 * @return bool Existence of josaonly param
+	 */
+	public static function checkJosaonlyParam( $param ) {
+		return ( $param === 'josaonly' || $param === '조사만' );
 	}
 
 	/*

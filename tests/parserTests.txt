@@ -174,6 +174,138 @@ language=ko
 !! end
 
 !! test
+Josa with override (in first position) (1)
+!! options
+language=ko
+!! input
+{{#을를:시약 100g|덮어쓰기=을}}
+!! result
+<p>시약 100g을
+</p>
+!! end
+
+!! test
+Josa with override (in first position) (2)
+!! options
+language=ko
+!! input
+{{#을를:시약 100g|오버라이드=을}}
+!! result
+<p>시약 100g을
+</p>
+!! end
+
+!! test
+Josa with override (in first position) (3)
+!! options
+language=ko
+!! input
+{{#을를:시약 100g|override=을}}
+!! result
+<p>시약 100g을
+</p>
+!! end
+
+!! test
+Josa with override (in second position) (1)
+!! options
+language=ko
+!! input
+{{#을를:시약 100g||override=을}}
+!! result
+<p>시약 100g을
+</p>
+!! end
+
+!! test
+Josa with override (in second position) (2)
+!! options
+language=ko
+!! input
+{{#을를:시약 100g|dummy|override=을}}
+!! result
+<p>시약 100g을
+</p>
+!! end
+
+!! test
+Josa with empty override
+!! options
+language=ko
+!! input
+{{#을를:시약 100g|override=}}
+!! result
+<p>시약 100g
+</p>
+!! end
+
+!! test
+Josa with josaonly (in first position) (1)
+!! options
+language=ko
+!! input
+{{#을를:나무|조사만}}
+!! result
+<p>를
+</p>
+!! end
+
+!! test
+Josa with josaonly (in first position) (2)
+!! options
+language=ko
+!! input
+{{#을를:나무|josaonly}}
+!! result
+<p>를
+</p>
+!! end
+
+!! test
+Josa with josaonly (in second position) (1)
+!! options
+language=ko
+!! input
+{{#을를:나무||josaonly}}
+!! result
+<p>를
+</p>
+!! end
+
+!! test
+Josa with josaonly (in second position) (2)
+!! options
+language=ko
+!! input
+{{#을를:나무|dummy|josaonly}}
+!! result
+<p>를
+</p>
+!! end
+
+!! test
+Josa with override and josaonly
+!! options
+language=ko
+!! input
+{{#을를:시약 100g|override=을|josaonly}}
+!! result
+<p>을
+</p>
+!! end
+
+!! test
+Josa with josaonly and override
+!! options
+language=ko
+!! input
+{{#을를:시약 100g|josaonly|override=을}}
+!! result
+<p>을
+</p>
+!! end
+
+!! test
 Josa with trailing ascii characters (1)
 !! options
 language=ko
