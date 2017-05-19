@@ -1,22 +1,22 @@
 <?php
-$magicWords = array();
+$magicWords = [];
 
-$magicWords['en'] = array(
-	'Eul/Ruel' => array ( 0, 'EulRuel' ),
-	'Eun/Neun' => array( 0, 'EunNeun' ),
-	'E/Ga' => array( 0, 'EGa' ),
-	'Gwa/Wa' => array( 0, 'GwaWa' ),
-	'A/Ya' => array( 0, 'AYa' ),
-	'Euro/Ro' => array( 0, 'Euro' ),
-	'E/' => array( 0, 'E' ),
-);
+$magicWords['en'] = [
+	'Eul/Ruel' => [ 0, 'EulRuel' ],
+	'Eun/Neun' => [ 0, 'EunNeun' ],
+	'E/Ga' => [ 0, 'EGa' ],
+	'Gwa/Wa' => [ 0, 'GwaWa' ],
+	'A/Ya' => [ 0, 'AYa' ],
+	'Euro/Ro' => [ 0, 'Euro' ],
+	'E/' => [ 0, 'E' ],
+];
 
-$magicWords['ko'] = array(
-	'Eul/Ruel' => array ( 0, '을를' ),
-	'Eun/Neun' => array( 0, '은는' ),
-	'E/Ga' => array( 0, '이가' ),
-	'Gwa/Wa' => array( 0, '과와' ),
-	'A/Ya' => array( 0, '아야' ),
-	'Euro/Ro' => array( 0, '으로' ),
-	'E/' => array( 0, '이' ),
-);
+$magicWords['ko'] = [
+	'Eul/Ruel' => [ 0, '을를' ],
+	'Eun/Neun' => [ 0, '은는' ],
+	'E/Ga' => [ 0, '이가' ],
+	'Gwa/Wa' => [ 0, '과와' ],
+	'A/Ya' => [ 0, '아야' ],
+	'Euro/Ro' => [ 0, '으로' ],
+	'E/' => [ 0, '이' ],
+];

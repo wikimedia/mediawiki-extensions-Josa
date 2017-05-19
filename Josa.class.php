@@ -1,21 +1,21 @@
 <?php
 /**
-  * Extension:Josa
-  * Author: JuneHyeon Bae <devunt@gmail.com>
-  * Original implementation by Park Shinjo <peremen@gmail.com>
-  * License: MIT License
-*/
+ * Extension:Josa
+ * Author: JuneHyeon Bae <devunt@gmail.com>
+ * Original implementation by Park Shinjo <peremen@gmail.com>
+ * License: MIT License
+ */
 
 class Josa {
-	private static $josaMap = array(
-		'Eul/Ruel' => array( '을', '를', '을(를)' ), # 곶감을 / 사과를
-		'Eun/Neun' => array( '은', '는', '은(는)' ), # 곶감은 / 사과는
-		'E/Ga' => array( '이', '가', '이(가)' ), # 곶감이 / 사과가
-		'Gwa/Wa' => array( '과', '와', '과(와)' ), # 곶감과 / 사과와
-		'A/Ya' => array( '아', '야', '아(야)' ), # 태준아 / 철수야
-		'Euro/Ro'  => array( '으로', '로', '(으)로' ), # 집으로 / 학교로
-		'E/'  => array( '이', '', '(이)' ), # 태준이가 / 철수가
-	);
+	private static $josaMap = [
+		'Eul/Ruel' => [ '을', '를', '을(를)' ], // 곶감을 / 사과를
+		'Eun/Neun' => [ '은', '는', '은(는)' ], // 곶감은 / 사과는
+		'E/Ga' => [ '이', '가', '이(가)' ], // 곶감이 / 사과가
+		'Gwa/Wa' => [ '과', '와', '과(와)' ], // 곶감과 / 사과와
+		'A/Ya' => [ '아', '야', '아(야)' ], // 태준아 / 철수야
+		'Euro/Ro'  => [ '으로', '로', '(으)로' ], // 집으로 / 학교로
+		'E/'  => [ '이', '', '(이)' ], // 태준이가 / 철수가
+	];
 
 	/**
 	 * @param Parser $parser
@@ -46,13 +46,18 @@ class Josa {
 		}
 		$code = self::convertToJohabCode( mb_substr( $str, -1, 1, 'utf-8' ) );
 		if ( !$code ) {
-			$idx = 2; # Not hangul
+			// Not hangul
+			$idx = 2;
 		} elseif ( ( $code - 0xAC00 ) % 28 === 0 ) {
-			$idx = 1; # No trailing consonant
+			// No trailing consonant
+			$idx = 1;
 		} elseif ( ( $type === 'Euro/Ro' ) && ( ( $code - 0xAC00 ) % 28 === 8 ) ) {
-			$idx = 1; # $type is Euro/Ro and trailing consonant is rieul(ㄹ). This is an exception on Korean postposition rules.
+			// $type is Euro/Ro and trailing consonant is rieul(ㄹ).
+			// This is an exception on Korean postposition rules.
+			$idx = 1;
 		} else {
-			$idx = 0; # Trailing consonant exists
+			// Trailing consonant exists
+			$idx = 0;
 		}
 		return self::$josaMap[$type][$idx];
 	}
@@ -60,12 +65,14 @@ class Josa {
 	/*
 	 * @param string $str String to convert
 	 * @return int Converted Johab code
+	 * @codingStandardsIgnoreStart
 	 * see https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B8%80_%EC%83%81%EC%9A%A9_%EC%A1%B0%ED%95%A9%ED%98%95_%EC%9D%B8%EC%BD%94%EB%94%A9
+	 * @codingStandardsIgnoreEnd
 	 */
 	private static function convertToJohabCode( $str ) {
-		$values = array();
+		$values = [];
 		$lookingFor = 1;
-		for ( $i = 0; $i < strlen( $str ); $i++ ) {
+		for ( $i = 0, $len = strlen( $str ); $i < $len; $i++ ) {
 			$thisValue = ord( $str[ $i ] );
 			if ( $thisValue < 128 ) {
 				return false;
