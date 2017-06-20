@@ -23,7 +23,7 @@ class Josa {
 	 */
 	public static function onParserFirstCallInit( Parser &$parser ) {
 		foreach ( self::$josaMap as $key => $value ) {
-			$parser->setFunctionHook( $key, function( $parser, $str, $with_str = true ) use ( $key ) {
+			$parser->setFunctionHook( $key, function ( $parser, $str, $with_str = true ) use ( $key ) {
 				$josa = Josa::getJosa( $key, $str );
 				if ( $with_str ) {
 					return $str . $josa;
