@@ -1,7 +1,7 @@
 <?php
 /**
  * Extension:Josa
- * Author: JuneHyeon Bae <devunt@gmail.com>
+ * Author: Bae Junehyeon <devunt@gmail.com>
  * Original implementation by Park Shinjo <peremen@gmail.com>
  * License: MIT License
  */
