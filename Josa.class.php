@@ -36,7 +36,7 @@ class Josa {
 	];
 
 	/**
-	 * @param Parser $parser
+	 * @param Parser &$parser
 	 * @return bool
 	 */
 	public static function onParserFirstCallInit( Parser &$parser ) {
@@ -88,7 +88,7 @@ class Josa {
 		return ( $param === 'josaonly' || $param === '조사만' );
 	}
 
-	/*
+	/**
 	 * @param string $type Type of the last letter in the word (see Josa::$josaMap's keys)
 	 * @param string $str Word to determine the josa
 	 * @return string Josa
