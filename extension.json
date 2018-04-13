@@ -22,8 +22,5 @@
 			"Josa::onParserFirstCallInit"
 		]
 	},
-	"ParserTestFiles": [
-		"tests/parserTests.txt"
-	],
 	"manifest_version": 1
 }
