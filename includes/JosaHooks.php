@@ -6,7 +6,7 @@
  * License: MIT License
  */
 
-class Josa {
+class JosaHooks {
 	private static $josaMap = [
 		'Eul/Ruel' => [ '을', '를', '을(를)' ], // 곶감을 / 사과를
 		'Eun/Neun' => [ '은', '는', '은(는)' ], // 곶감은 / 사과는
@@ -43,20 +43,20 @@ class Josa {
 		foreach ( self::$josaMap as $key => $value ) {
 			// @codingStandardsIgnoreLine
 			$parser->setFunctionHook( $key, function ( $parser, $str, $param1 = null, $param2 = null ) use ( $key ) {
-				$josa = Josa::getJosa( $key, $str );
+				$josa = JosaHooks::getJosa( $key, $str );
 
 				foreach ( [ $param1, $param2 ] as $param ) {
 					if ( $param === null ) {
 						break;
 					}
 
-					$override = Josa::checkOverrideParam( $param );
+					$override = JosaHooks::checkOverrideParam( $param );
 					if ( $override !== false ) {
 						$josa = $override;
 						continue;
 					}
 
-					$josaonly = Josa::checkJosaonlyParam( $param );
+					$josaonly = JosaHooks::checkJosaonlyParam( $param );
 					if ( $josaonly === true ) {
 						$str = '';
 						continue;
@@ -89,7 +89,7 @@ class Josa {
 	}
 
 	/**
-	 * @param string $type Type of the last letter in the word (see Josa::$josaMap's keys)
+	 * @param string $type Type of the last letter in the word (see JosaHooks::$josaMap's keys)
 	 * @param string $str Word to determine the josa
 	 * @return string Josa
 	 */

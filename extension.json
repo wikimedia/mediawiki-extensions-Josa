@@ -15,11 +15,11 @@
 		"JosaMagic": "Josa.i18n.magic.php"
 	},
 	"AutoloadClasses": {
-		"Josa": "Josa.class.php"
+		"JosaHooks": "includes/JosaHooks.php"
 	},
 	"Hooks": {
 		"ParserFirstCallInit": [
-			"Josa::onParserFirstCallInit"
+			"JosaHooks::onParserFirstCallInit"
 		]
 	},
 	"manifest_version": 1
