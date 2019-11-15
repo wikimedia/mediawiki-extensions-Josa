@@ -36,10 +36,10 @@ class JosaHooks {
 	];
 
 	/**
-	 * @param Parser &$parser
+	 * @param Parser $parser
 	 * @return bool
 	 */
-	public static function onParserFirstCallInit( Parser &$parser ) {
+	public static function onParserFirstCallInit( Parser $parser ) {
 		foreach ( self::$josaMap as $key => $value ) {
 			// @codingStandardsIgnoreLine
 			$parser->setFunctionHook( $key, function ( $parser, $str, $param1 = null, $param2 = null ) use ( $key ) {
