@@ -18,9 +18,7 @@
 		"JosaHooks": "includes/JosaHooks.php"
 	},
 	"Hooks": {
-		"ParserFirstCallInit": [
-			"JosaHooks::onParserFirstCallInit"
-		]
+		"ParserFirstCallInit": "JosaHooks::onParserFirstCallInit"
 	},
 	"manifest_version": 1
 }
