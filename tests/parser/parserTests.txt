@@ -1,3 +1,5 @@
+!! Version 2
+
 !! functionhooks
 Eul/Ruel
 Eun/Neun
@@ -12,9 +14,9 @@ E/
 Josa {{#Eul/Ruel:}} -> Eul: Hangul
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:법원}}
-!! result
+!! html
 <p>법원을
 </p>
 !! end
@@ -23,9 +25,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Hangul
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:학교}}
-!! result
+!! html
 <p>학교를
 </p>
 !! end
@@ -34,9 +36,9 @@ language=ko
 Josa {{#Eun/Neun:}} -> Eun: Hangul
 !! options
 language=ko
-!! input
+!! wikitext
 {{#은는:저녁}}
-!! result
+!! html
 <p>저녁은
 </p>
 !! end
@@ -45,9 +47,9 @@ language=ko
 Josa {{#Eun/Neun:}} -> Neun: Hangul
 !! options
 language=ko
-!! input
+!! wikitext
 {{#은는:과자}}
-!! result
+!! html
 <p>과자는
 </p>
 !! end
@@ -56,9 +58,9 @@ language=ko
 Josa {{#E/Ga:}} -> E: Hangul
 !! options
 language=ko
-!! input
+!! wikitext
 {{#이가:재판관}}
-!! result
+!! html
 <p>재판관이
 </p>
 !! end
@@ -67,9 +69,9 @@ language=ko
 Josa {{#E/Ga:}} -> Ga: Hangul
 !! options
 language=ko
-!! input
+!! wikitext
 {{#이가:기여자}}
-!! result
+!! html
 <p>기여자가
 </p>
 !! end
@@ -78,9 +80,9 @@ language=ko
 Josa {{#Gwa/Wa:}} -> Gwa: Hangul
 !! options
 language=ko
-!! input
+!! wikitext
 {{#과와:생강}}
-!! result
+!! html
 <p>생강과
 </p>
 !! end
@@ -89,9 +91,9 @@ language=ko
 Josa {{#Gwa/Wa:}} -> Wa: Hangul
 !! options
 language=ko
-!! input
+!! wikitext
 {{#과와:양파}}
-!! result
+!! html
 <p>양파와
 </p>
 !! end
@@ -100,9 +102,9 @@ language=ko
 Josa {{#A/Ya:}} -> A: Hangul
 !! options
 language=ko
-!! input
+!! wikitext
 {{#아야:개똥}}
-!! result
+!! html
 <p>개똥아
 </p>
 !! end
@@ -111,9 +113,9 @@ language=ko
 Josa {{#A/Ya:}} -> Ya: Hangul
 !! options
 language=ko
-!! input
+!! wikitext
 {{#아야:철수}}
-!! result
+!! html
 <p>철수야
 </p>
 !! end
@@ -122,9 +124,9 @@ language=ko
 Josa {{#Euro/Ro:}} -> Euro: Hangul
 !! options
 language=ko
-!! input
+!! wikitext
 {{#으로:항공편}}
-!! result
+!! html
 <p>항공편으로
 </p>
 !! end
@@ -133,9 +135,9 @@ language=ko
 Josa {{#Euro/Ro:}} -> Ro: Hangul
 !! options
 language=ko
-!! input
+!! wikitext
 {{#으로:자동차}}
-!! result
+!! html
 <p>자동차로
 </p>
 !! end
@@ -144,9 +146,9 @@ language=ko
 Josa {{#Eu/Euro:}} -> Ro: Hangul with riuel
 !! options
 language=ko
-!! input
+!! wikitext
 {{#으로:철길}}
-!! result
+!! html
 <p>철길로
 </p>
 !! end
@@ -155,9 +157,9 @@ language=ko
 Josa {{#E/:}} -> E: Hangul
 !! options
 language=ko
-!! input
+!! wikitext
 {{#이:수영}}가
-!! result
+!! html
 <p>수영이가
 </p>
 !! end
@@ -166,9 +168,9 @@ language=ko
 Josa {{#E/:}} -> (none): Hangul
 !! options
 language=ko
-!! input
+!! wikitext
 {{#이:영희}}가
-!! result
+!! html
 <p>영희가
 </p>
 !! end
@@ -177,9 +179,9 @@ language=ko
 Josa with override (in first position) (1)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:시약 100g|덮어쓰기=을}}
-!! result
+!! html
 <p>시약 100g을
 </p>
 !! end
@@ -188,9 +190,9 @@ language=ko
 Josa with override (in first position) (2)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:시약 100g|오버라이드=을}}
-!! result
+!! html
 <p>시약 100g을
 </p>
 !! end
@@ -199,9 +201,9 @@ language=ko
 Josa with override (in first position) (3)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:시약 100g|override=을}}
-!! result
+!! html
 <p>시약 100g을
 </p>
 !! end
@@ -210,9 +212,9 @@ language=ko
 Josa with override (in second position) (1)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:시약 100g||override=을}}
-!! result
+!! html
 <p>시약 100g을
 </p>
 !! end
@@ -221,9 +223,9 @@ language=ko
 Josa with override (in second position) (2)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:시약 100g|dummy|override=을}}
-!! result
+!! html
 <p>시약 100g을
 </p>
 !! end
@@ -232,9 +234,9 @@ language=ko
 Josa with empty override
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:시약 100g|override=}}
-!! result
+!! html
 <p>시약 100g
 </p>
 !! end
@@ -243,9 +245,9 @@ language=ko
 Josa with josaonly (in first position) (1)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:나무|조사만}}
-!! result
+!! html
 <p>를
 </p>
 !! end
@@ -254,9 +256,9 @@ language=ko
 Josa with josaonly (in first position) (2)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:나무|josaonly}}
-!! result
+!! html
 <p>를
 </p>
 !! end
@@ -265,9 +267,9 @@ language=ko
 Josa with josaonly (in second position) (1)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:나무||josaonly}}
-!! result
+!! html
 <p>를
 </p>
 !! end
@@ -276,9 +278,9 @@ language=ko
 Josa with josaonly (in second position) (2)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:나무|dummy|josaonly}}
-!! result
+!! html
 <p>를
 </p>
 !! end
@@ -287,9 +289,9 @@ language=ko
 Josa with override and josaonly
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:시약 100g|override=을|josaonly}}
-!! result
+!! html
 <p>을
 </p>
 !! end
@@ -298,9 +300,9 @@ language=ko
 Josa with josaonly and override
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:시약 100g|josaonly|override=을}}
-!! result
+!! html
 <p>을
 </p>
 !! end
@@ -309,9 +311,9 @@ language=ko
 Josa with trailing ascii characters (1)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:[[도로]]}}
-!! result
+!! html
 <p><a href="/index.php?title=%EB%8F%84%EB%A1%9C&amp;action=edit&amp;redlink=1" class="new" title="도로 (없는 문서)">도로</a>를
 </p>
 !! end
@@ -320,9 +322,9 @@ language=ko
 Josa with trailing ascii characters (2)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:'''기차'''}}
-!! result
+!! html
 <p><b>기차</b>를
 </p>
 !! end
@@ -331,9 +333,9 @@ language=ko
 Josa with trailing ascii characters (3)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:사과 (과일)}}
-!! result
+!! html
 <p>사과 (과일)을(를)
 </p>
 !! end
@@ -342,9 +344,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Eul: Number (0)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:0}}
-!! result
+!! html
 <p>0을
 </p>
 !! end
@@ -353,9 +355,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Eul: Number (1)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:1}}
-!! result
+!! html
 <p>1을
 </p>
 !! end
@@ -364,9 +366,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Eul: Number (2)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:2}}
-!! result
+!! html
 <p>2를
 </p>
 !! end
@@ -375,9 +377,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Eul: Number (3)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:3}}
-!! result
+!! html
 <p>3을
 </p>
 !! end
@@ -386,9 +388,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Eul: Number (4)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:4}}
-!! result
+!! html
 <p>4를
 </p>
 !! end
@@ -397,9 +399,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Eul: Number (5)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:5}}
-!! result
+!! html
 <p>5를
 </p>
 !! end
@@ -408,9 +410,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Eul: Number (6)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:6}}
-!! result
+!! html
 <p>6을
 </p>
 !! end
@@ -419,9 +421,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Eul: Number (7)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:7}}
-!! result
+!! html
 <p>7을
 </p>
 !! end
@@ -430,9 +432,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Eul: Number (8)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:8}}
-!! result
+!! html
 <p>8을
 </p>
 !! end
@@ -441,9 +443,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Eul: Number (9)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:9}}
-!! result
+!! html
 <p>9를
 </p>
 !! end
@@ -452,9 +454,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (A)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:A}}
-!! result
+!! html
 <p>A를
 </p>
 !! end
@@ -463,9 +465,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (B)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:B}}
-!! result
+!! html
 <p>B를
 </p>
 !! end
@@ -474,9 +476,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (C)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:C}}
-!! result
+!! html
 <p>C를
 </p>
 !! end
@@ -485,9 +487,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (D)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:D}}
-!! result
+!! html
 <p>D를
 </p>
 !! end
@@ -496,9 +498,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (E)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:E}}
-!! result
+!! html
 <p>E를
 </p>
 !! end
@@ -507,9 +509,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (F)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:F}}
-!! result
+!! html
 <p>F를
 </p>
 !! end
@@ -518,9 +520,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (G)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:G}}
-!! result
+!! html
 <p>G를
 </p>
 !! end
@@ -529,9 +531,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (H)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:H}}
-!! result
+!! html
 <p>H를
 </p>
 !! end
@@ -540,9 +542,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (I)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:I}}
-!! result
+!! html
 <p>I를
 </p>
 !! end
@@ -551,9 +553,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (J)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:J}}
-!! result
+!! html
 <p>J를
 </p>
 !! end
@@ -562,9 +564,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (K)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:K}}
-!! result
+!! html
 <p>K를
 </p>
 !! end
@@ -573,9 +575,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Eul: Uppercase Alphabet (L)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:L}}
-!! result
+!! html
 <p>L을
 </p>
 !! end
@@ -584,9 +586,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Eul: Uppercase Alphabet (M)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:M}}
-!! result
+!! html
 <p>M을
 </p>
 !! end
@@ -595,9 +597,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Eul: Uppercase Alphabet (N)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:N}}
-!! result
+!! html
 <p>N을
 </p>
 !! end
@@ -606,9 +608,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (O)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:O}}
-!! result
+!! html
 <p>O를
 </p>
 !! end
@@ -617,9 +619,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (P)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:P}}
-!! result
+!! html
 <p>P를
 </p>
 !! end
@@ -628,9 +630,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (Q)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:Q}}
-!! result
+!! html
 <p>Q를
 </p>
 !! end
@@ -639,9 +641,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Eul: Uppercase Alphabet (R)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:R}}
-!! result
+!! html
 <p>R을
 </p>
 !! end
@@ -650,9 +652,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (S)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:S}}
-!! result
+!! html
 <p>S를
 </p>
 !! end
@@ -661,9 +663,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (T)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:T}}
-!! result
+!! html
 <p>T를
 </p>
 !! end
@@ -672,9 +674,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (U)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:U}}
-!! result
+!! html
 <p>U를
 </p>
 !! end
@@ -683,9 +685,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (V)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:V}}
-!! result
+!! html
 <p>V를
 </p>
 !! end
@@ -694,9 +696,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (W)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:W}}
-!! result
+!! html
 <p>W를
 </p>
 !! end
@@ -705,9 +707,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (X)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:X}}
-!! result
+!! html
 <p>X를
 </p>
 !! end
@@ -716,9 +718,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (Y)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:Y}}
-!! result
+!! html
 <p>Y를
 </p>
 !! end
@@ -727,9 +729,9 @@ language=ko
 Josa {{#Eul/Ruel:}} -> Ruel: Uppercase Alphabet (Z)
 !! options
 language=ko
-!! input
+!! wikitext
 {{#을를:Z}}
-!! result
+!! html
 <p>Z를
 </p>
 !! end
