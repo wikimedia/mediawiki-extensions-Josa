@@ -6,6 +6,9 @@
 	"descriptionmsg": "josa-desc",
 	"license-name": "MIT",
 	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
 	"MessagesDirs": {
 		"Josa": [
 			"i18n"
@@ -20,5 +23,5 @@
 	"Hooks": {
 		"ParserFirstCallInit": "JosaHooks::onParserFirstCallInit"
 	},
-	"manifest_version": 1
+	"manifest_version": 2
 }
