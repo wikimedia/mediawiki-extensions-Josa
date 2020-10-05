@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Otokoume"
+			"Otokoume",
+			"TKsdik8900"
 		]
 	},
-	"josa-desc": "韓国の助詞プロセスの一部を自動化します"
+	"josa-desc": "朝鮮語の助詞プロセスの一部を自動化します"
 }
