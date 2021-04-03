@@ -41,7 +41,6 @@ class JosaHooks {
 	 */
 	public static function onParserFirstCallInit( Parser $parser ) {
 		foreach ( self::$josaMap as $key => $value ) {
-			// @codingStandardsIgnoreLine
 			$parser->setFunctionHook( $key, function ( $parser, $str, $param1 = null, $param2 = null ) use ( $key ) {
 				$josa = JosaHooks::getJosa( $key, $str );
 
@@ -94,8 +93,11 @@ class JosaHooks {
 	 * @return string Josa
 	 */
 	public static function getJosa( $type, $str ) {
-		// @codingStandardsIgnoreLine
-		$str = preg_replace( '/[\x{0000}-\x{0027}\x{002A}-\x{002F}\x{003A}-\x{0040}\x{005B}-\x{0060}\x{007B}-\x{00FF}]/u', '', $str );
+		$str = preg_replace(
+			'/[\x{0000}-\x{0027}\x{002A}-\x{002F}\x{003A}-\x{0040}\x{005B}-\x{0060}\x{007B}-\x{00FF}]/u',
+			'',
+			$str
+		);
 		$chr = mb_substr( $str, -1, 1, 'utf-8' );
 		if ( array_key_exists( $chr, self::$pronounceMap ) ) {
 			$chr = self::$pronounceMap[$chr];
@@ -121,9 +123,7 @@ class JosaHooks {
 	/*
 	 * @param string $str String to convert
 	 * @return int Converted Johab code
-	 * @codingStandardsIgnoreStart
 	 * see https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B8%80_%EC%83%81%EC%9A%A9_%EC%A1%B0%ED%95%A9%ED%98%95_%EC%9D%B8%EC%BD%94%EB%94%A9
-	 * @codingStandardsIgnoreEnd
 	 */
 	private static function convertToJohabCode( $str ) {
 		$values = [];
