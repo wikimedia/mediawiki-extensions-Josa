@@ -7,6 +7,7 @@
  */
 
 class JosaHooks {
+	/** @var array */
 	private static $josaMap = [
 		'Eul/Ruel' => [ '을', '를', '을(를)' ], // 곶감을 / 사과를
 		'Eun/Neun' => [ '은', '는', '은(는)' ], // 곶감은 / 사과는
@@ -17,7 +18,11 @@ class JosaHooks {
 		'E/'  => [ '이', '', '(이)' ], // 태준이가 / 철수가
 	];
 
-	// This dictionary matches each numbers and alphabets to the corresponding hangul pronounces
+	/**
+	 * This dictionary matches each numbers and alphabets to the corresponding hangul pronounces.
+	 *
+	 * @var array
+	 */
 	private static $pronounceMap = [
 		'0' => '영', '1' => '일', '2' => '이',
 		'3' => '삼', '4' => '사', '5' => '오',
@@ -120,10 +125,11 @@ class JosaHooks {
 		return self::$josaMap[$type][$idx];
 	}
 
-	/*
+	/**
+	 * @see https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B8%80_%EC%83%81%EC%9A%A9_%EC%A1%B0%ED%95%A9%ED%98%95_%EC%9D%B8%EC%BD%94%EB%94%A9
+	 *
 	 * @param string $str String to convert
-	 * @return int Converted Johab code
-	 * see https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B8%80_%EC%83%81%EC%9A%A9_%EC%A1%B0%ED%95%A9%ED%98%95_%EC%9D%B8%EC%BD%94%EB%94%A9
+	 * @return int|bool Converted Johab code
 	 */
 	private static function convertToJohabCode( $str ) {
 		$values = [];
