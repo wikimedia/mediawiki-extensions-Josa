@@ -46,7 +46,9 @@ class JosaHooks {
 	 */
 	public static function onParserFirstCallInit( Parser $parser ) {
 		foreach ( self::$josaMap as $key => $value ) {
-			$parser->setFunctionHook( $key, function ( $parser, $str, $param1 = null, $param2 = null ) use ( $key ) {
+			$parser->setFunctionHook( $key, static function (
+				$parser, $str, $param1 = null, $param2 = null
+			) use ( $key ) {
 				$josa = JosaHooks::getJosa( $key, $str );
 
 				foreach ( [ $param1, $param2 ] as $param ) {
