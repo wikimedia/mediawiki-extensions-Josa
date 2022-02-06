@@ -17,11 +17,11 @@
 	"ExtensionMessagesFiles": {
 		"JosaMagic": "Josa.i18n.magic.php"
 	},
-	"AutoloadClasses": {
-		"JosaHooks": "includes/JosaHooks.php"
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\Josa\\": "includes/"
 	},
 	"Hooks": {
-		"ParserFirstCallInit": "JosaHooks::onParserFirstCallInit"
+		"ParserFirstCallInit": "MediaWiki\\Extension\\Josa\\Hooks::onParserFirstCallInit"
 	},
 	"manifest_version": 2
 }

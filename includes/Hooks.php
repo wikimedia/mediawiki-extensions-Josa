@@ -6,7 +6,11 @@
  * License: MIT License
  */
 
-class JosaHooks {
+namespace MediaWiki\Extension\Josa;
+
+use Parser;
+
+class Hooks {
 	/** @var array */
 	private static $josaMap = [
 		'Eul/Ruel' => [ '을', '를', '을(를)' ], // 곶감을 / 사과를
@@ -49,20 +53,20 @@ class JosaHooks {
 			$parser->setFunctionHook( $key, static function (
 				$parser, $str, $param1 = null, $param2 = null
 			) use ( $key ) {
-				$josa = JosaHooks::getJosa( $key, $str );
+				$josa = self::getJosa( $key, $str );
 
 				foreach ( [ $param1, $param2 ] as $param ) {
 					if ( $param === null ) {
 						break;
 					}
 
-					$override = JosaHooks::checkOverrideParam( $param );
+					$override = self::checkOverrideParam( $param );
 					if ( $override !== false ) {
 						$josa = $override;
 						continue;
 					}
 
-					$josaonly = JosaHooks::checkJosaonlyParam( $param );
+					$josaonly = self::checkJosaonlyParam( $param );
 					if ( $josaonly === true ) {
 						$str = '';
 						continue;
