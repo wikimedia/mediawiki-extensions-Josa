@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Verdy p"
 		]
 	},
-	"josa-desc": "Automatise certaines parties du processus de post-positionnement coréen."
+	"josa-desc": "Automatise certaines parties du processus de postpositionnement en coréen."
 }
