@@ -21,7 +21,12 @@
 		"MediaWiki\\Extension\\Josa\\": "includes/"
 	},
 	"Hooks": {
-		"ParserFirstCallInit": "MediaWiki\\Extension\\Josa\\Hooks::onParserFirstCallInit"
+		"ParserFirstCallInit": "main"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\Extension\\Josa\\Hooks"
+		}
 	},
 	"manifest_version": 2
 }

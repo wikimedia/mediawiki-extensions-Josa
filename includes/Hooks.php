@@ -8,9 +8,10 @@
 
 namespace MediaWiki\Extension\Josa;
 
+use MediaWiki\Hook\ParserFirstCallInitHook;
 use Parser;
 
-class Hooks {
+class Hooks implements ParserFirstCallInitHook {
 	/** @var array */
 	private static $josaMap = [
 		'Eul/Ruel' => [ '을', '를', '을(를)' ], // 곶감을 / 사과를
@@ -46,9 +47,8 @@ class Hooks {
 
 	/**
 	 * @param Parser $parser
-	 * @return bool
 	 */
-	public static function onParserFirstCallInit( Parser $parser ) {
+	public function onParserFirstCallInit( $parser ) {
 		foreach ( self::$josaMap as $key => $value ) {
 			$parser->setFunctionHook( $key, static function (
 				$parser, $str, $param1 = null, $param2 = null
@@ -76,7 +76,6 @@ class Hooks {
 				return $str . $josa;
 			} );
 		}
-		return true;
 	}
 
 	/**
