@@ -9,7 +9,7 @@
 namespace MediaWiki\Extension\Josa;
 
 use MediaWiki\Hook\ParserFirstCallInitHook;
-use Parser;
+use MediaWiki\Parser\Parser;
 
 class Hooks implements ParserFirstCallInitHook {
 	/** @var array */
