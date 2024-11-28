@@ -12,6 +12,8 @@ use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Parser\Parser;
 
 class Hooks implements ParserFirstCallInitHook {
+	// phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
+
 	/** @var array */
 	private static $josaMap = [
 		'Eul/Ruel' => [ '을', '를', '을(를)' ], // 곶감을 / 사과를
@@ -22,6 +24,8 @@ class Hooks implements ParserFirstCallInitHook {
 		'Euro/Ro'  => [ '으로', '로', '(으)로' ], // 집으로 / 학교로
 		'E/'  => [ '이', '', '(이)' ], // 태준이가 / 철수가
 	];
+
+	// phpcs:enable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
 
 	/**
 	 * This dictionary matches each numbers and alphabets to the corresponding hangul pronounces.
