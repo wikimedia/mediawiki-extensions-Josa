@@ -138,7 +138,7 @@ class Hooks implements ParserFirstCallInitHook {
 	 * @see https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B8%80_%EC%83%81%EC%9A%A9_%EC%A1%B0%ED%95%A9%ED%98%95_%EC%9D%B8%EC%BD%94%EB%94%A9
 	 *
 	 * @param string $str String to convert
-	 * @return int|bool Converted Johab code
+	 * @return int|false Converted Johab code
 	 */
 	private static function convertToJohabCode( $str ) {
 		$values = [];
