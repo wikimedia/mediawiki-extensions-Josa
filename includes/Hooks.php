@@ -8,7 +8,7 @@
 
 namespace MediaWiki\Extension\Josa;
 
-use MediaWiki\Hook\ParserFirstCallInitHook;
+use MediaWiki\Parser\Hook\ParserFirstCallInitHook;
 use MediaWiki\Parser\Parser;
 
 class Hooks implements ParserFirstCallInitHook {
