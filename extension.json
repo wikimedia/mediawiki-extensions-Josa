@@ -7,7 +7,7 @@
 	"license-name": "MIT",
 	"type": "parserhook",
 	"requires": {
-		"MediaWiki": ">= 1.46"
+		"MediaWiki": ">= 1.47.0"
 	},
 	"MessagesDirs": {
 		"Josa": [
