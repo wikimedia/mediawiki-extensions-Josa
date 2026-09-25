@@ -15,7 +15,7 @@ class Hooks implements ParserFirstCallInitHook {
 	// phpcs:disable MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment
 
 	/** @var array */
-	private static $josaMap = [
+	private const JOSA_MAP = [
 		'Eul/Ruel' => [ '을', '를', '을(를)' ], // 곶감을 / 사과를
 		'Eun/Neun' => [ '은', '는', '은(는)' ], // 곶감은 / 사과는
 		'E/Ga' => [ '이', '가', '이(가)' ], // 곶감이 / 사과가
@@ -32,7 +32,7 @@ class Hooks implements ParserFirstCallInitHook {
 	 *
 	 * @var array
 	 */
-	private static $pronounceMap = [
+	private const PRONOUNCE_MAP = [
 		'0' => '영', '1' => '일', '2' => '이',
 		'3' => '삼', '4' => '사', '5' => '오',
 		'6' => '육', '7' => '칠', '8' => '팔',
@@ -53,7 +53,7 @@ class Hooks implements ParserFirstCallInitHook {
 	 * @param Parser $parser
 	 */
 	public function onParserFirstCallInit( $parser ) {
-		foreach ( self::$josaMap as $key => $value ) {
+		foreach ( self::JOSA_MAP as $key => $value ) {
 			$parser->setFunctionHook( $key, static function (
 				$parser, $str, $param1 = null, $param2 = null
 			) use ( $key ) {
@@ -102,7 +102,7 @@ class Hooks implements ParserFirstCallInitHook {
 	}
 
 	/**
-	 * @param string $type Type of the last letter in the word (see JosaHooks::$josaMap's keys)
+	 * @param string $type Type of the last letter in the word (see JosaHooks::JOSA_MAP's keys)
 	 * @param string $str Word to determine the josa
 	 * @return string Josa
 	 */
@@ -113,8 +113,8 @@ class Hooks implements ParserFirstCallInitHook {
 			$str
 		);
 		$chr = mb_substr( $str, -1, 1, 'utf-8' );
-		if ( array_key_exists( $chr, self::$pronounceMap ) ) {
-			$chr = self::$pronounceMap[$chr];
+		if ( array_key_exists( $chr, self::PRONOUNCE_MAP ) ) {
+			$chr = self::PRONOUNCE_MAP[$chr];
 		}
 		$code = self::convertToJohabCode( $chr );
 		if ( !$code ) {
@@ -131,7 +131,7 @@ class Hooks implements ParserFirstCallInitHook {
 			// Trailing consonant exists
 			$idx = 0;
 		}
-		return self::$josaMap[$type][$idx];
+		return self::JOSA_MAP[$type][$idx];
 	}
 
 	/**
