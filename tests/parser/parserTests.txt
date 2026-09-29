@@ -314,7 +314,7 @@ language=ko
 !! wikitext
 {{#을를:[[도로]]}}
 !! html
-<p><a href="/index.php?title=%EB%8F%84%EB%A1%9C&amp;action=edit&amp;redlink=1" class="new" title="도로 (없는 문서)">도로</a>를
+<p><a href="/index.php?title=%EB%8F%84%EB%A1%9C&amp;action=edit&amp;redlink=1" class="new" title="도로 (문서가 존재하지 않음)">도로</a>를
 </p>
 !! end
 
